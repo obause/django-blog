@@ -15,9 +15,13 @@
   // Files settings
   "files.autoSave": "onFocusChange",
   "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
     "*.pyx": "cython",
     ".clang*": "yaml"
   },
+  "emmet.includeLanguages": { "django-html": "html" },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
