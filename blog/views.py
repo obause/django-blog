@@ -7,8 +7,7 @@ def start_page(request):
 
 
 def posts(request):
-    # TODO implement
-    pass
+    return render(request, "blog/all_posts.html")
 
 
 def post_detail(request):

@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Mein Blog
 {% endblock title %}
 
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/post.css" %}">
+<link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock css_files %}
+
 {% block content %}
-<header id="main-navigation">
-    <h1><a href="">Ole's Blog</a></h1>
-    <nav>
-        <a href="">Alle Posts</a>
-    </nav>
-</header>
 
 <section id="welcome">
     <header>
-        <img src="" alt="Ole Bause">
+        <img src="{% static "blog/images/profile_pic.jpg" %}" alt="Ole Bause">
         <h2>OLE'S BLOG</h2>
     </header>
     <p>Hi, ich bin Ole und dies ist mein Blog!</p>
@@ -24,17 +24,7 @@ Mein Blog
     <h2>Meine neuesten Posts</h2>
 
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <img src="" alt="Bildbeschreibung">
-                    <div class="post__content">
-                        <h3>Dummy Example Post</h3>
-                        <p>Dies ist die Beschreibung zu diesem Dummy Post, um das Design zu testen.</p>
-                    </div>
-                </a>
-            </article>
-        </li>
+        {% include "blog/includes/post.html" %}
     </ul>
 </section>
 

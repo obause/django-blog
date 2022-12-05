@@ -1,0 +1,12 @@
+{% load static %}
+<li>
+    <article class="post">
+        <a href="{% url "post-detail-page" "dummy-example-post" %}">
+            <img src="{% static "blog/images/mountains.jpg" %}" alt="Bildbeschreibung">
+            <div class="post__content">
+                <h3>Dummy Example Post</h3>
+                <p>Dies ist die Beschreibung zu diesem Dummy Post, um das Design zu testen.</p>
+            </div>
+        </a>
+    </article>
+</li>
