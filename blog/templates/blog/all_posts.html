@@ -15,12 +15,9 @@ Mein Blog
     <h2>Meine Blog Beiträge</h2>
 
     <ul>
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
+        {% for post in all_posts %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
     </ul>
 
 </section>
