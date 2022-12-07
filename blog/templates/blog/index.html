@@ -24,7 +24,9 @@ Mein Blog
     <h2>Meine neuesten Posts</h2>
 
     <ul>
-        {% include "blog/includes/post.html" %}
+        {% for post in posts %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
     </ul>
 </section>
 
